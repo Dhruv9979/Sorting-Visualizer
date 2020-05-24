@@ -62,27 +62,37 @@ export default class SortingVisualizer extends React.Component {
     render() {
         const { array } = this.state;
         return [
-			<header key="Navigation">
-				<h1 className="logo">Sorting Algorithms</h1>
+			<header>
+				<section class="logo">
+					<h1>Sorting Algorithm</h1>
+				</section>
 				<nav>
-					<ul className="nav_links">
+					<ul class="items">
 						<li>
-							<button onClick={() => this.resetArray()}>Generate New Array</button>
+							<a onClick={() => this.resetArray()} href="#">
+								New Array
+							</a>
 						</li>
 						<li>
-							<button onClick={() => this.mergeSort()}>Merge Sort</button>
+							<a onClick={() => this.mergeSort()} href="#">
+								Merge
+							</a>
 						</li>
 						<li>
-							<button onClick={() => this.quickSort()}>Quick Sort</button>
+							<a onClick={() => this.quickSort()} href="#">
+								Quick
+							</a>
 						</li>
 						<li>
-							<button onClick={() => this.bubbleSort()}>Bubble Sort</button>
-						</li>
-						<li>
-							<button onClick={() => this.testSortingAlgorithms()}>Test Sorting Algorithms</button>
+							<a onClick={() => this.bubbleSort()} href="#">
+								Bubble
+							</a>
 						</li>
 					</ul>
 				</nav>
+				<div class="menu-toggle">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>
 			</header>,
 			<div className="array-container" key="Array">
 				{array.map((value, idx) => (
