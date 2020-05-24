@@ -62,12 +62,12 @@ export default class SortingVisualizer extends React.Component {
     render() {
         const { array } = this.state;
         return [
-			<header>
-				<section class="logo">
+			<header key = {"Navigation"}>
+				<section className="logo">
 					<h1>Sorting Algorithm</h1>
-				</section>
+                </section>
 				<nav>
-					<ul class="items">
+					<ul className="items">
 						<li>
 							<a onClick={() => this.resetArray()} href="#">
 								New Array
@@ -90,8 +90,8 @@ export default class SortingVisualizer extends React.Component {
 						</li>
 					</ul>
 				</nav>
-				<div class="menu-toggle">
-					<i class="fa fa-bars" aria-hidden="true"></i>
+				<div className="menu-toggle">
+					<i className="fa fa-bars" aria-hidden="true"></i>
 				</div>
 			</header>,
 			<div className="array-container" key="Array">
