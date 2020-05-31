@@ -1,16 +1,25 @@
-export const bubbleSort = (arr) => {
+export function bubbleSortAnimations(arr) {
+	const animations = [];
+	if (arr.length <= 1) return arr;
+	const auxiliaryArray = arr.slice();
+	bubbleSort(animations, auxiliaryArray);
+	return animations;
+}
+
+function bubbleSort(animations, auxiliaryArray) {
 	var noSwaps;
-	for (var i = arr.length; i > 0; i--) {
+	for (var i = auxiliaryArray.length; i > 0; i--) {
 		noSwaps = true;
 		for (var j = 0; j < i - 1; j++) {
-			if (arr[j] > arr[j + 1]) {
-				swap(arr, j, j + 1);
+			if (auxiliaryArray[j] > auxiliaryArray[j + 1]) {
+				swap(auxiliaryArray, j, j + 1);
+				animations.push([j, j + 1]);
 				noSwaps = false;
 			}
 		}
 		if (noSwaps) break;
 	}
-	return arr;
+	return auxiliaryArray;
 }
 
 function swap(arr, idx1, idx2) {
