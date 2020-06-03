@@ -184,7 +184,8 @@ export default class SortingVisualizer extends React.Component {
 					<h1>Sorting Algorithms</h1>
 				</section>
 				<nav>
-					<ul className="items">
+                    <ul className="items"> 
+
 						<li>
 							<a onClick={() => this.resetArray()} href="#">
 								New Array
