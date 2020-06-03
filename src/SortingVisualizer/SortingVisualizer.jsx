@@ -186,15 +186,6 @@ export default class SortingVisualizer extends React.Component {
 				<nav>
 					<ul className="items">
 						<li>
-							<input
-								id="changeSize"
-								type="range"
-								min="0"
-								max="100"
-								style={{ background: "white", cursor: "cursor" }}
-							/>
-						</li>
-						<li>
 							<a onClick={() => this.resetArray()} href="#">
 								New Array
 							</a>
